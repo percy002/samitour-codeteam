@@ -1,0 +1,104 @@
+/*
+Theme Name: CodeTeam
+Author: CodeTeam
+Author URI: https://codeteam.pe/
+Description: CodeTeam Theme for WordPress 
+Requires PHP: 7.2
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: codeteam
+Tags: blog, one-column, custom-background, custom-colors, custom-header, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+@font-face {
+    font-family: 'Akura Popo';
+    src: url('assets/fonts/AkuraPopo.otf') format('opentype'),
+        url('assets/fonts/AkuraPopo.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --primary-color: #FF6B01;
+    --secondary-color: #3C0C12;
+    --white-color: #fff;
+    --black-color: #000;
+    --gray-color: #f4f4f4;
+    --dark-color: #333;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'akura popo', sans-serif;
+}
+
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--black-color);
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: var(--primary, #3C0C12);
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+h2 {
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: "Akura Popo";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+h5 {
+    color: var(--secondary-color);
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    color: var(--dark-color);
+}
+
+.li,
+a {
+    text-decoration: none !important;
+    color: var(--black-color);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
