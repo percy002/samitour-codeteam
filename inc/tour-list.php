@@ -13,17 +13,14 @@ if ($tours_query->have_posts()): ?>
             $portada = get_field('portada'); // Obtener el campo personalizado 'portada'
             ?>
             <div class="tour-card">
-                <a href="<?php the_permalink(); ?>">
-                    <?php if ($portada): ?>
-                        <img src="<?php echo esc_url($portada['url']); ?>" alt="<?php echo esc_attr($portada['alt']); ?>" />
-                    <?php endif; ?>
-                    <div class="tour-card__content">
-                        <h5><?php the_title(); ?></h5>
-                        <p><?php the_content() ?></p>
-                        <button class="button-primary">EXPLORAR TOUR</button>
-                    </div>
-
-                </a>
+                <?php if ($portada): ?>
+                    <img src="<?php echo esc_url($portada['url']); ?>" alt="<?php echo esc_attr($portada['alt']); ?>" />
+                <?php endif; ?>              
+                <div class="tour-card__content">
+                    <h5><?php the_title(); ?></h5>
+                    <p><?php the_content() ?></p>
+                    <a href="" class="button-secondary">EXPLORAR TOUR</a>
+                </div>
             </div>
         <?php endwhile; ?>
     </div>

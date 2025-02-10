@@ -21,14 +21,16 @@ Tags: blog, one-column, custom-background, custom-colors, custom-header, custom-
 }
 
 :root {
-    --primary-color: #FF6B01;
-    --secondary-color: #3C0C12;
+    --primary-color: #3C0C12;
+    --secondary-color: #FF6B01;
     --white-color: #fff;
     --black-color: #000;
     --gray-color: #f4f4f4;
     --dark-color: #333;
 }
-
+*{
+    box-sizing: border-box;
+}
 h1,
 h2,
 h3 {
@@ -76,7 +78,7 @@ h2 {
 }
 
 h5 {
-    color: var(--secondary-color);
+    color: var(--primary-color);
     text-align: center;
     font-family: Inter;
     font-size: 20px;
