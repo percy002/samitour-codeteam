@@ -43,9 +43,15 @@
 .separator {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url(../img/bg/plaza-cusco.jpg) lightgray 0px -233.522px / 100% 515.942% no-repeat;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     padding: 30px 0;
-    height: 80px;
+    gap: 10px;
     color: white;
+}
+.separator img{
+    width: 1683px;
+    height: 29.995px;
+    aspect-ratio: 1683.00/29.99;
+    opacity: 0.5;
 }

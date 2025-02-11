@@ -23,6 +23,12 @@ nav {
 .top-nav .top-nav__contact p{
     color: white;
 }
+
+.top-nav__contact p{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 .nav-menu{
     height: 90px;
     display: flex;
