@@ -1,3 +1,4 @@
+<div class="footer-line"></div>
 </body>
 <footer>
     <div class="footer">

@@ -50,8 +50,9 @@
     color: white;
 }
 .separator img{
-    width: 1683px;
-    height: 29.995px;
+    width: 100%;
+    height: 30px;
     aspect-ratio: 1683.00/29.99;
     opacity: 0.5;
+    object-fit: cover;
 }
