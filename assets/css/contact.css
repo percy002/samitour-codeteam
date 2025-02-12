@@ -1,0 +1,41 @@
+.contact {
+    background-color: white;
+    display: flex;
+    padding: 30px 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    align-self: stretch;
+}
+.contact__form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+.contact__form__group{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+.contact__form__group input{
+    width: 100%;
+    border-bottom: 2px solid var(--primary-color);
+    
+}
+
+.contact__form input::placeholder,textarea::placeholder{
+    color: var(--primary-color);
+    font-weight: 700;
+    
+}
+.contact__form__group > div{
+    flex: 1 0 0;
+}
+.contact__form textarea{
+    width: 100%;
+    border-bottom: 2px solid var(--primary-color);
+    padding: 10px;
+    height: calc(1.5em * 7); /* Ajusta la altura para 7 filas */
+
+}

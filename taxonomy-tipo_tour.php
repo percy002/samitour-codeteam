@@ -19,4 +19,7 @@ $imagen_url = get_field('portada');
     </div>
 
 </section>
+<?php get_template_part('template-parts/separator-secondary', null, array('title' => "¿Alguna Duda o Consulta?")); ?>
+<?php get_template_part('template-parts/contact'); ?>
+
 <?php get_footer(); ?>

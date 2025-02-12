@@ -19,11 +19,17 @@
     border: none;
     padding: 8px 10px;
 }
-
 .section-container {
     background: url(../img/bg/concrete.webp) lightgray 50% / cover no-repeat;
-    padding: 40px 150px;
+    padding: 0px 15px;
 }
+@media(min-width: 768px) {    
+    .section-container {
+        padding: 40px 150px;
+
+    }
+}
+
 
 .section-container h4 {
     color: var(--secondary-color);
@@ -49,10 +55,32 @@
     gap: 10px;
     color: white;
 }
-.separator img{
+
+.separator img {
     width: 100%;
     height: 30px;
     aspect-ratio: 1683.00/29.99;
     opacity: 0.5;
+    object-fit: cover;
+}
+
+.separator-secondary {
+    background-image: url(../img/bg/plaza-cusco.jpg), linear-gradient(rgba(255, 107, 1, 0.90), rgba(255, 107, 1, 0.90));
+    background-color: lightgray;
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+    gap: 10px;
+    color: white;
+}
+
+.separator-secondary img {
+    width: 100%;
+    height: 30px;
+    aspect-ratio: 1683.00/29.99;
     object-fit: cover;
 }

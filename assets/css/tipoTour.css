@@ -1,5 +1,6 @@
 .hero-taxonomy {
     height: 320px;
+    background-size: cover;
 }
 
 .hero-taxonomy__content {
@@ -10,6 +11,7 @@
     align-items: center;
     gap: 20px;
     height: 100%;
+    
 }
 
 .hero-taxonomy__content__info {
