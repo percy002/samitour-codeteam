@@ -30,7 +30,7 @@ nav {
     gap: 10px;
 }
 .nav-menu{
-    height: 90px;
+    height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -59,4 +59,10 @@ nav {
 .menu ul a{
     color: white;
     text-decoration: none;
+    text-transform: uppercase;
+}
+
+.languages{
+    display: flex;
+    gap: 10px;
 }

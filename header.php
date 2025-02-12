@@ -35,8 +35,8 @@
         ));
         ?>
         <button class="nav-menu__button">PREGUNTE AHORA</button>
-        <div class="languages">
-            <a href="#">EN</a>
-            <a href="#">ES</a>
-        </div>
+
+        <ul class="languages">
+            <?php pll_the_languages(['show_flags'=> 1, 'show_names'=> 0, 'hide_current'=> 1]); ?>
+        </ul>
     </nav>
