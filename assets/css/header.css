@@ -2,17 +2,31 @@ nav {
     position: fixed;
     width: 100%;
     transition: top 0.3s ease-in-out;
-    top: 34px;
-}
-.top-nav{
-    display: flex;
-    justify-content: end;
-    background-color: #3C0C12;
-    color: white;
-    height: 34px;
+    top: 0px;
 }
 
-.top-nav .top-nav__contact{
+@media(min-width: 768px) {
+    nav {
+        top: 34px;
+    }
+}
+
+.top-nav {
+    display: none;
+}
+
+@media(min-width: 768px) {
+    .top-nav {
+        display: flex;
+        justify-content: end;
+        background-color: #3C0C12;
+        color: white;
+        height: 34px;
+    }
+}
+
+
+.top-nav .top-nav__contact {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,29 +34,57 @@ nav {
     padding: 5px 100px;
 }
 
-.top-nav .top-nav__contact p{
+.top-nav .top-nav__contact p {
     color: white;
 }
 
-.top-nav__contact p{
+.top-nav__contact p {
     display: flex;
     align-items: center;
     gap: 10px;
 }
-.nav-menu{
-    height: 70px;
+.nav-menu-mobile{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 100px;
+    padding: 10px 20px;
     background: #00000080;
 }
+.nav-menu-mobile__logo {
+    height: 30px;
+    width: auto;
+}
+.nav-menu-mobile__button{
+    background-color: transparent;
+}
+.nav-menu-mobile__button i{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+@media(min-width: 768px) {
+    .nav-menu-mobile {
+        display: none;
+    }
+}
+.nav-menu{
+    display: none;
+}
+@media(min-width: 768px) {
+    .nav-menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 100px;
+        background: #00000080;
+    }
+}
 
-.nav-menu__logo{
+.nav-menu__logo {
     height: 50px;
 }
 
-.nav-menu__button{
+.nav-menu__button {
     background-color: #FF6B01;
     color: white;
     border: none;
@@ -50,19 +92,20 @@ nav {
     border-radius: 5px;
 }
 
-.menu ul{
+.menu ul {
     display: flex;
     gap: 20px;
     color: white;
     list-style-type: none;
 }
-.menu ul a{
+
+.menu ul a {
     color: white;
     text-decoration: none;
     text-transform: uppercase;
 }
 
-.languages{
+.languages {
     display: flex;
     gap: 10px;
 }

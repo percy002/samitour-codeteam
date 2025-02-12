@@ -4,9 +4,11 @@
     <div class="footer">
         <div class="footer__brand">
             <a href="<?php echo home_url() ?>">
-                <img class="nav-menu__logo" src="<?php echo get_template_directory_uri() ?>/assets/img/logo_blanco.png" alt="Logo">
+                <img class="nav-menu__logo" src="<?php echo get_template_directory_uri() ?>/assets/img/logo_blanco.png"
+                    alt="Logo">
             </a>
-            <p>Ofrecemos experiencias únicas en Cusco. Nuestro compromiso con la excelencia nos posiciona como referente en el sector, invitándote a descubrir la auténtica magia de Cusco con Machu Picchu Sacred</p>
+            <p>Ofrecemos experiencias únicas en Cusco. Nuestro compromiso con la excelencia nos posiciona como referente
+                en el sector, invitándote a descubrir la auténtica magia de Cusco con Machu Picchu Sacred</p>
         </div>
         <div class="footer__section">
             <h6>CONTÁCTENOS</h6>
@@ -34,13 +36,23 @@
                 <li>PAQUETES</li>
                 <li>BLOG</li>
             </ul>
-            <h6>SÍGUENOS EN:</h6>
+            <div class="footer__social">
+                <h6>SÍGUENOS EN:</h6>
+                <ul>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-tiktok"></i>
+
+                </ul>
+            </div>
         </div>
-        
+
     </div>
     <div class="copyright">
-        <p>COPYRIGHT © 2024 - SAMITOURS MACHUPICCHU | REALIZADO POR <a href="https://codeteam.pe/" target="__blank">CODETEAM</a></p>
+        <p>COPYRIGHT © 2024 - SAMITOURS MACHUPICCHU | REALIZADO POR <a href="https://codeteam.pe/"
+                target="__blank">CODETEAM</a></p>
     </div>
     <?php wp_footer() ?>
 </footer>
+
 </html>
