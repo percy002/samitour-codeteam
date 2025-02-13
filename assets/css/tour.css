@@ -1,0 +1,28 @@
+.tour__features{
+    display: flex;
+    gap: 30px;
+    color: var(--primary-color);
+}
+
+.tour__features > div{
+    flex: 1 0 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+.tour__features > div:first-child{
+    /* flex-direction: column;
+    gap: 5px; */
+}
+
+.tour__features > div > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.separator-tours img{
+    width: 100%;
+    
+}

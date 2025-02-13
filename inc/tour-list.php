@@ -19,7 +19,7 @@ if ($tours_query->have_posts()): ?>
                 <div class="tour-card__content">
                     <h5><?php the_title(); ?></h5>
                     <p><?php the_content() ?></p>
-                    <a href="" class="button-secondary">EXPLORAR TOUR</a>
+                    <a href="<?= get_permalink(); ?>" class="button-secondary">EXPLORAR TOUR</a>
                 </div>
             </div>
         <?php endwhile; ?>

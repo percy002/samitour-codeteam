@@ -84,3 +84,7 @@
     aspect-ratio: 1683.00/29.99;
     object-fit: cover;
 }
+
+.bold{
+    font-weight: 700;
+}
