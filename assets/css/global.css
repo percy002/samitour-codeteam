@@ -8,22 +8,25 @@
 
 .button-primary {
     background-color: var(--primary-color);
-    color: var(--white-color);
+    color: var(--white-color) !important;
     border: none;
+    font-weight: 700 !important;
     padding: 8px 10px;
 }
 
 .button-secondary {
     background-color: var(--secondary-color);
-    color: var(--white-color);
+    color: var(--white-color) !important;
     border: none;
+    font-weight: 700 !important;
+
     padding: 8px 10px;
 }
 .section-container {
     background: url(../img/bg/concrete.webp) lightgray 50% / cover no-repeat;
     padding: 0px 15px;
 }
-@media(min-width: 768px) {    
+@media(min-width: 1024px) {    
     .section-container {
         padding: 40px 150px;
 

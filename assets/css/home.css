@@ -23,7 +23,7 @@
   align-items: center;
   gap: 20px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .hero__content {
     padding: 10px 20px 50px 20px;
   }
