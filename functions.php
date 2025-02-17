@@ -19,6 +19,7 @@ function codeteam_enqueue_scripts() {
 	wp_enqueue_style('codeteam-tipoTour-style', get_template_directory_uri() . '/assets/css/tipoTour.css');
 	wp_enqueue_style('codeteam-contact-style', get_template_directory_uri() . '/assets/css/contact.css');
 	wp_enqueue_style('codeteam-tour-style', get_template_directory_uri() . '/assets/css/tour.css');
+	wp_enqueue_style('codeteam-about-style', get_template_directory_uri() . '/assets/css/about.css');
 
 	// Enqueue JS
 	wp_enqueue_script('codeteam-custom-js', get_template_directory_uri() . '/assets/js/custom.js', array('jquery'), null, true);
