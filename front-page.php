@@ -12,10 +12,7 @@
 <section class="section-container">
     <div class="about">
         <h1>SAMITOURS MACHUPICCHU</h1>
-        <p>Ofrecemos experiencias inolvidables, a través de nuestros tours, contando con tarifas accesibles y un
-            servicio de calidad garantizado. Le invitamos a que se deje llevar a increíbles destinos como: Machu Picchu,
-            El Camino Inca, Valle Sagrado, Valle Sur, entre otros icónicos lugares de la maravillosa ciudad imperial del
-            Cusco.</p>
+        <p><?php the_content()?></p>
     </div>
     <div class="flex-center">
         <button class="button-secondary">LEER MAS</button>

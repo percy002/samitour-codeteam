@@ -31,11 +31,16 @@
 
 .tour__features {
     display: flex;
-    gap: 30px;
+    flex-wrap: wrap;
+    gap: 10px;
     color: var(--primary-color);
     align-items: center;
     padding: 20px 0;
-
+}
+@media(min-width: 1024px) {
+    .tour__features {
+        gap: 30px;
+    }
 }
 
 .tour__features>div {
@@ -58,12 +63,17 @@
     /* height: 34px; */
     object-fit: cover;
 }
-
 .tour-container {
     display: flex;
     flex-direction: row;
     gap: 20px;
-    padding: 30px 120px;
+    padding: 30px 0px;
+}
+
+@media(min-width: 1024px) {
+    .tour-container {
+        padding: 30px 120px;
+    }
 }
 
 .tour__sidebar{
@@ -141,6 +151,9 @@
     font-weight: 800;
 }
 
+.tour__gallery img{
+    max-height: 250px;
+}
 /* .tour__detalle ul {
     padding-left: 30px;
     padding-bottom: 15px;
