@@ -38,7 +38,8 @@
             wp_nav_menu(array(
                 'theme_location' => 'primary-menu',
                 'container' => 'div',
-                'container_class' => 'menu'
+                'container_class' => 'menu',
+                'menu_class'      => 'menu-items'
             ));
             ?>
             <button class="nav-menu__button">PREGUNTE AHORA</button>
@@ -46,6 +47,42 @@
             <ul class="languages">
                 <?php pll_the_languages(['show_flags' => 1, 'show_names' => 0, 'hide_current' => 1]); ?>
             </ul>
+        </div>
+
+        <?php
+        $submenu_items = getSubMenu();
+
+        ?>
+        <div class="select-submenu">
+            <?php foreach ($submenu_items as $submenu_item): ?>
+                <div class="submenu section-container hidden" id="<?= $submenu_item['name'] ?>">
+                    <div class="submenu__links " >
+                        <h5 class="color-secondary"><?= esc_html($submenu_item['name']); ?></h5>
+                        <ul>
+                            <?php foreach ($submenu_item['posts'] as $post): ?>
+                                <li><a href="<?= $post['permalink'] ?>"><?= $post['title'] ?></a></li>
+                                <div class="line-separator-horizontal"></div>
+                            <?php endforeach ?>
+                            <li><a href="<?= get_term_link($submenu_item['term_id']) ?>" class="color-secondary">ver
+                                    todos</a>
+                            </li>
+                            <div class="line-separator-horizontal"></div>
+                        </ul>
+                    </div>
+                    <div class="line-separator-vertical"></div>
+                    <div class="submenu__description">
+                        <h5><?= esc_html($submenu_item['name']); ?></h5>
+                        <p><?= esc_html($submenu_item['description']); ?></p>
+                    </div>
+                    <div class="line-separator-vertical"></div>
+                    <div class="submenu__image">
+                        <?php if ($submenu_item['portada']): ?>
+                            <img src="<?= esc_url($submenu_item['portada']['url']) ?>"
+                                alt="<?= esc_attr($submenu_item['portada']['alt']) ?>">
+                        <?php endif ?>
+                    </div>
+                </div>
+            <?php endforeach ?>
         </div>
         <div class="nav-menu-mobile">
             <a href="<?php echo home_url() ?>">

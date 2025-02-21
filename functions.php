@@ -1,4 +1,6 @@
 <?php
+require_once get_template_directory() . '/inc/getItemsSubMenu.php';
+
 // Register Navigation Menus
 function codeteam_register_menus() {
 	register_nav_menus(array(
@@ -23,6 +25,7 @@ function codeteam_enqueue_scripts() {
 
 	// Enqueue JS
 	wp_enqueue_script('codeteam-custom-js', get_template_directory_uri() . '/assets/js/custom.js', array('jquery'), null, true);
+	wp_enqueue_script('codeteam-selectMenu-js', get_template_directory_uri() . '/assets/js/selectMenu.js', array('jquery'), null, true);
 }
 add_action('wp_enqueue_scripts', 'codeteam_enqueue_scripts');
 

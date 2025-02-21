@@ -1,9 +1,9 @@
 .color-primary {
-    color: var(--primary-color);
+    color: var(--primary-color) !important;
 }
 
 .color-secondary {
-    color: var(--secondary-color);
+    color: var(--secondary-color) !important;
 }
 
 .button-primary {
@@ -90,4 +90,22 @@
 
 .bold{
     font-weight: 700;
+}
+
+.line-separator-horizontal {
+    width: 100%;
+    border-bottom: 1px solid #9A9A9A;
+}
+
+.line-separator-vertical {
+    height: auto;
+    border-left: 1px solid #9A9A9A;
+}
+
+.hidden{
+    display: none !important;
+}
+
+.active{
+    display: flex !important;
 }

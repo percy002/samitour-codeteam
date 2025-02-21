@@ -105,6 +105,8 @@ footer {
     margin: 0;
     text-align: start;
 
+    letter-spacing: 1.3px;
+
 }
 
 @media(min-width: 1024px) {
@@ -120,6 +122,7 @@ footer {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    letter-spacing: 1.5px;
 
     display: flex;
     flex-direction: column;
