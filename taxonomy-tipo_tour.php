@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 <?php
-$imagen_url = get_field('portada');
+$term = get_queried_object(); // Obtener el término de la taxonomía actual
+$imagen_url = get_field('portada', 'term_' . $term->term_id); // Obtener el campo 'portada' para el término actual
 ?>
 
 <?php get_template_part('template-parts/taxonomy-hero', null, [

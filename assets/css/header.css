@@ -189,4 +189,7 @@ nav {
     height: 200px;
     aspect-ratio: 3/2;
     object-fit: cover;
+
+    border-radius: 20px;
+
 }

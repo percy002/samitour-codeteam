@@ -39,7 +39,7 @@
                 'theme_location' => 'primary-menu',
                 'container' => 'div',
                 'container_class' => 'menu',
-                'menu_class'      => 'menu-items'
+                'menu_class' => 'menu-items'
             ));
             ?>
             <button class="nav-menu__button">PREGUNTE AHORA</button>
@@ -56,7 +56,7 @@
         <div class="select-submenu">
             <?php foreach ($submenu_items as $submenu_item): ?>
                 <div class="submenu section-container hidden" id="<?= $submenu_item['name'] ?>">
-                    <div class="submenu__links " >
+                    <div class="submenu__links ">
                         <h5 class="color-secondary"><?= esc_html($submenu_item['name']); ?></h5>
                         <ul>
                             <?php foreach ($submenu_item['posts'] as $post): ?>
@@ -77,8 +77,7 @@
                     <div class="line-separator-vertical"></div>
                     <div class="submenu__image">
                         <?php if ($submenu_item['portada']): ?>
-                            <img src="<?= esc_url($submenu_item['portada']['url']) ?>"
-                                alt="<?= esc_attr($submenu_item['portada']['alt']) ?>">
+                            <img src="<?= esc_url($submenu_item['portada']) ?>" alt="">
                         <?php endif ?>
                     </div>
                 </div>
@@ -91,7 +90,7 @@
             </a>
             <button class="nav-menu__button">PREGUNTE AHORA</button>
             <ul class="languages">
-                <?php pll_the_languages(['show_flags' => 1, 'show_names' => 0, 'hide_current' => 1]); ?>
+                <?= pll_current_language('flag'); ?>
             </ul>
             <button class="nav-menu-mobile__button">
                 <i class="fa-solid fa-bars"></i>

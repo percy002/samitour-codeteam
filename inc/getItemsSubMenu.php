@@ -43,7 +43,7 @@ function getSubMenu(){
                 'slug' => $term->slug,
                 'name' => $term->name,
                 'description' => $term->description,
-                'portada' => $portada,
+                'portada' => $portada['url'],
                 'posts' => $posts,
             );
         }
