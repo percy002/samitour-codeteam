@@ -22,25 +22,31 @@ $menu = isset($args['menu']) ? $args['menu'] : array();
         <ul>
             <?php foreach ($menu as $menu_item): ?>
                 <li>
-                    <a href="<?= esc_url($menu_item['url']); ?>"><?= esc_html($menu_item['title']); ?> <i
-                            class="fa-solid fa-chevron-down"></i></a>
-                    <?php if ($menu_item['type'] == 'taxonomy' && !empty($menu_item['posts'])): ?>
+                    <a href="<?= ($menu_item['type'] != 'taxonomy') ?? $menu_item['url']; ?>"><?= esc_html($menu_item['title']); ?>
+                        <?php if ($menu_item['type'] == 'taxonomy'): ?>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        <?php endif ?>
+                    </a>
+                    <?php if ($menu_item['type'] == 'taxonomy' || !empty($menu_item['posts'])): ?>
                         <ul class="submenu-mobile hidden">
                             <?php foreach ($menu_item['posts'] as $child): ?>
                                 <li><a href="<?= esc_url($child['permalink']); ?>"><?= esc_html($child['title']); ?></a></li>
                                 <div class="line-separator-horizontal"></div>
 
                             <?php endforeach; ?>
+                            <li><a href="<?= $menu_item['url'] ?>" class="color-secondary">Ver Todos</a></li>
+                            <div class="line-separator-horizontal"></div>
+
                         </ul>
                     <?php endif; ?>
                     <div class="line-separator-horizontal"></div>
                 </li>
             <?php endforeach; ?>
-            <div class="mobile-submenu__contact">
-                <p><i class="fa-solid fa-phone"></i> 999 999 999</p>
-                <?php get_template_part('template-parts/social'); ?>
-            </div>
         </ul>
+        <div class="mobile-submenu__contact">
+            <p><i class="fa-solid fa-phone"></i> 999 999 999</p>
+            <?php get_template_part('template-parts/social'); ?>
+        </div>
     </div>
 </div>
 
