@@ -1,5 +1,6 @@
 <?php
 require_once get_template_directory() . '/inc/getItemsSubMenu.php';
+require_once get_template_directory() . '/inc/getItemsMenu.php';
 
 // Register Navigation Menus
 function codeteam_register_menus() {
@@ -22,6 +23,7 @@ function codeteam_enqueue_scripts() {
 	wp_enqueue_style('codeteam-contact-style', get_template_directory_uri() . '/assets/css/contact.css');
 	wp_enqueue_style('codeteam-tour-style', get_template_directory_uri() . '/assets/css/tour.css');
 	wp_enqueue_style('codeteam-about-style', get_template_directory_uri() . '/assets/css/about.css');
+	wp_enqueue_style('codeteam-social-style', get_template_directory_uri() . '/assets/css/social.css');
 
 	// Enqueue JS
 	wp_enqueue_script('codeteam-custom-js', get_template_directory_uri() . '/assets/js/custom.js', array('jquery'), null, true);

@@ -51,7 +51,7 @@
 
         <?php
         $submenu_items = getSubMenu();
-
+        $menu = getMenu();    
         ?>
         <div class="select-submenu">
             <?php foreach ($submenu_items as $submenu_item): ?>
@@ -83,17 +83,6 @@
                 </div>
             <?php endforeach ?>
         </div>
-        <div class="nav-menu-mobile">
-            <a href="<?php echo home_url() ?>">
-                <img class="nav-menu-mobile__logo"
-                    src="<?php echo get_template_directory_uri() ?>/assets/img/logo_blanco.png" alt="Logo">
-            </a>
-            <button class="nav-menu__button">PREGUNTE AHORA</button>
-            <ul class="languages">
-                <?= pll_current_language('flag'); ?>
-            </ul>
-            <button class="nav-menu-mobile__button">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-        </div>
+        <?php get_template_part('template-parts/menu-mobile',null,['menu'=> $menu])?>
+
     </nav>
