@@ -45,8 +45,10 @@
             <button class="nav-menu__button">PREGUNTE AHORA</button>
 
             <ul class="languages">
-                <?php pll_the_languages(['show_flags' => 1, 'show_names' => 0, 'hide_current' => 1]); ?>
-            </ul>
+            <li>
+                <?= pll_current_language('flag'); // Mostrar la bandera del idioma actual ?>
+            </li>
+        </ul>
         </div>
 
         <?php
