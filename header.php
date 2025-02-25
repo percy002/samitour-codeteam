@@ -62,8 +62,8 @@
                         <h5 class="color-secondary"><?= esc_html($submenu_item['name']); ?></h5>
                         <ul>
                             <?php if (is_array($submenu_item['posts']) && !empty($submenu_item['posts'])): ?>
-                                <?php foreach ($submenu_item['posts'] as $post): ?>
-                                    <li><a href="<?= esc_url($post['permalink']) ?>"><?= esc_html($post['title']) ?></a></li>
+                                <?php foreach ($submenu_item['posts'] as $item): ?>
+                                    <li><a href="<?= ($item['permalink']) ?>"><?= ($item['title']) ?></a></li>
                                     <div class="line-separator-horizontal"></div>
                                 <?php endforeach; ?>
                             <?php endif; ?>
