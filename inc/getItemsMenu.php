@@ -40,9 +40,8 @@ function getMenu() {
                             'permalink' => get_permalink(),
                         );
                     }
-                    wp_reset_postdata();
                 }
-
+                
                 $item['term_id'] = $term->term_id;
                 $item['slug'] = $term->slug;
                 $item['name'] = $term->name;
@@ -50,6 +49,7 @@ function getMenu() {
                 $item['portada'] = $portada['url'];
                 $item['posts'] = $posts;
             }
+            wp_reset_postdata();
         }
 
         // Agregar el elemento al array de submenús
