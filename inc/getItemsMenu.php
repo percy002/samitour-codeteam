@@ -19,6 +19,7 @@ function getMenu() {
             $term = get_term($menu_item->object_id, $menu_item->object);
             if ($term) {
                 $portada = get_field('portada', 'term_' . $term->term_id);
+                $portada_url = is_array($portada) ? $portada['url'] : ''; // Manejar el caso en que 'portada' no exista o no sea un array
 
                 $query = new WP_Query(array(
                     'post_type' => 'tour',
@@ -46,7 +47,7 @@ function getMenu() {
                 $item['slug'] = $term->slug;
                 $item['name'] = $term->name;
                 $item['description'] = $term->description;
-                $item['portada'] = $portada['url'];
+                $item['portada'] = $portada_url;
                 $item['posts'] = $posts;
             }
             wp_reset_postdata();
