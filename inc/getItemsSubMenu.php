@@ -37,7 +37,6 @@ function getSubMenu(){
                 }
                 wp_reset_postdata();
             }
-            var_dump($posts);
             // Almacenar la información en el array
             $itemsSubmenu[] = array(
                 'term_id' => $term->term_id,
