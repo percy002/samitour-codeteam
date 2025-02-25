@@ -7,7 +7,7 @@ Template Name: Nosotros
 <?php get_header();
 $imagen_url = get_field('portada');
 $history = get_field('historia');
-$portada = get_field('imagen_historia')['url'];
+$imagen_historia = is_array(get_field('imagen_historia')) ? get_field('imagen_historia')['url'] : "";
 
 $por_que_nosotros = get_field('por_que_nosotros');
 
@@ -27,7 +27,7 @@ $vision = get_field('vision');
             <p><?= $history ?></p>
         </div>
         <div class="">
-            <img src="<?= $portada ?>" alt="">
+            <img src="<?= $imagen_historia ?>" alt="">
         </div>
     </div>
 </section>

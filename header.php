@@ -45,15 +45,15 @@
             <button class="nav-menu__button">PREGUNTE AHORA</button>
 
             <ul class="languages">
-            <li>
-                <?= pll_current_language('flag'); // Mostrar la bandera del idioma actual ?>
-            </li>
-        </ul>
+                <li>
+                    <?= pll_current_language('flag'); // Mostrar la bandera del idioma actual ?>
+                </li>
+            </ul>
         </div>
 
         <?php
         $submenu_items = getSubMenu();
-        $menu = getMenu();    
+        $menu = getMenu();
         ?>
         <div class="select-submenu">
             <?php foreach ($submenu_items as $submenu_item): ?>
@@ -61,10 +61,12 @@
                     <div class="submenu__links ">
                         <h5 class="color-secondary"><?= esc_html($submenu_item['name']); ?></h5>
                         <ul>
-                            <?php foreach ($submenu_item['posts'] as $post): ?>
-                                <li><a href="<?= $post['permalink'] ?>"><?= $post['title'] ?></a></li>
-                                <div class="line-separator-horizontal"></div>
-                            <?php endforeach ?>
+                            <?php if (is_array(!empty($submenu_item['posts'])) && !empty($submenu_item['posts'])): ?>
+                                <?php foreach ($submenu_item['posts'] as $post): ?>
+                                    <li><a href="<?= esc_url($post['permalink']) ?>"><?= esc_html($post['title']) ?></a></li>
+                                    <div class="line-separator-horizontal"></div>
+                                <?php endforeach; ?>
+                            <?php endif; ?>
                             <li><a href="<?= get_term_link($submenu_item['term_id']) ?>" class="color-secondary">ver
                                     todos</a>
                             </li>
@@ -85,6 +87,6 @@
                 </div>
             <?php endforeach ?>
         </div>
-        <?php get_template_part('template-parts/menu-mobile',null,['menu'=> $menu])?>
+        <?php get_template_part('template-parts/menu-mobile', null, ['menu' => $menu]) ?>
 
     </nav>

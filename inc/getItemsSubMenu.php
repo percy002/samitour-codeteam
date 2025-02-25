@@ -12,7 +12,8 @@ function getSubMenu(){
         foreach ($terms as $term) {
             // Obtener el campo personalizado 'portada' para cada término
             $portada = get_field('portada', 'term_' . $term->term_id);
-    
+            $portada_url = is_array($portada) ? $portada['url'] : ''; // Manejar el caso en que 'portada' no exista o no sea un array
+        
             // Obtener los CPT asociados a cada término
             $query = new WP_Query(array(
                 'post_type' => 'tour',
@@ -43,7 +44,7 @@ function getSubMenu(){
                 'slug' => $term->slug,
                 'name' => $term->name,
                 'description' => $term->description,
-                'portada' => $portada['url'],
+                'portada' => $portada_url,
                 'posts' => $posts,
             );
         }
