@@ -61,12 +61,10 @@
                     <div class="submenu__links ">
                         <h5 class="color-secondary"><?= esc_html($submenu_item['name']); ?></h5>
                         <ul>
-                            <?php if (is_array(!empty($submenu_item['posts'])) && !empty($submenu_item['posts'])): ?>
-                                <?php foreach ($submenu_item['posts'] as $post): ?>
-                                    <li><a href="<?= esc_url($post['permalink']) ?>"><?= esc_html($post['title']) ?></a></li>
-                                    <div class="line-separator-horizontal"></div>
-                                <?php endforeach; ?>
-                            <?php endif; ?>
+                            <?php foreach ($submenu_item['posts'] as $post): ?>
+                                <li><a href="<?= esc_url($post['permalink']) ?>"><?= esc_html($post['title']) ?></a></li>
+                                <div class="line-separator-horizontal"></div>
+                            <?php endforeach; ?>
                             <li><a href="<?= get_term_link($submenu_item['term_id']) ?>" class="color-secondary">ver
                                     todos</a>
                             </li>
