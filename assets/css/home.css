@@ -13,6 +13,13 @@
   justify-content: end;
   align-items: center;
   color: white;
+  padding: 0;
+}
+
+@media(min-width: 1024px) {
+  .hero {
+    padding-bottom: 50px;
+  }
 }
 
 .hero__content {

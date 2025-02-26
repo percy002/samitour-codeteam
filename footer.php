@@ -49,8 +49,9 @@
 
     </div>
     <div class="copyright">
-        <p>COPYRIGHT © 2024 - SAMITOURS MACHUPICCHU | REALIZADO POR <a href="https://codeteam.pe/"
-                target="__blank">CODETEAM</a></p>
+        <p>COPYRIGHT © <?= date('Y') ?> - SAMITOURS MACHUPICCHU</p>
+        <div class="copyright-separator"></div>
+        <p>REALIZADO POR <a href="https://codeteam.pe/" target="__blank">CODETEAM</a></p>
     </div>
     <?php wp_footer() ?>
 </footer>

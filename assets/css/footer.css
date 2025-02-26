@@ -146,12 +146,39 @@ footer {
 
 .copyright {
     display: flex;
+    flex-direction: column;
+    gap: 10px;
     justify-content: center;
     align-items: center;
-    padding: 15px 0;
+    padding: 10px;
     background-color: var(--secondary-color);
+}
+
+@media(min-width: 1024px) {
+    .copyright{
+        flex-direction: row;
+        padding: 15px 0;;
+    }
 }
 
 .copyright p {
     color: white;
+    font-family: "Akura Popo";
+    font-size: 20px;
+}
+
+.copyright-separator{
+    display: flex;
+    width: 100%;
+    height: 0;
+    border-bottom: 2px solid #9A9A9A;
+    border-right: none;
+}
+@media(min-width: 1024px) {
+    .copyright-separator{
+        width: auto;
+        height: 25px;
+        border-bottom: none;
+        border-right: #9A9A9A 2px solid;
+    }
 }
