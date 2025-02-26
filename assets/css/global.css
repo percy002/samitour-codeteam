@@ -109,3 +109,13 @@
 .active{
     display: flex !important;
 }
+
+.stars{
+    display: flex;
+    gap: 5px;    
+}
+
+.stars img{
+    width: auto !important;
+    height: 20px !important;
+}

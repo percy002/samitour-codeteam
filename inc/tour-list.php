@@ -10,7 +10,8 @@ if ($tours_query->have_posts()): ?>
     <div class="tours-list">
         <?php while ($tours_query->have_posts()):
             $tours_query->the_post();
-            $portada = get_field('portada'); // Obtener el campo personalizado 'portada'
+            $portada = get_field('portada'); 
+            $precio = get_field('informacion_general')['precio'] ?? '0.00';
             ?>
             <div class="tour-card">
                 <?php if ($portada): ?>
@@ -19,6 +20,13 @@ if ($tours_query->have_posts()): ?>
                 <div class="tour-card__content">
                     <h5><?php the_title(); ?></h5>
                     <p><?php the_content() ?></p>
+                    <div class="tour-card__details">
+                        <?php get_template_part('template-parts/stars') ?>
+                        <div class="tour-card__content__price">
+                            <p>Desde:</p>
+                            <p class="price">US$. <?= $precio ?></p>
+                        </div>
+                    </div>
                     <a href="<?= get_permalink(); ?>" class="button-secondary">EXPLORAR TOUR</a>
                 </div>
             </div>
