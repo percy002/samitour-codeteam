@@ -1,4 +1,6 @@
-<div class="footer-line"></div>
+<section class="section-container-footer">
+    <div class="footer-line"></div>
+</section>
 </body>
 <footer>
     <div class="footer">
