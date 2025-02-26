@@ -32,8 +32,12 @@ $recomendaciones = get_field('recomendaciones');
 <section class="tour__content">
     <div class="tour__features">
         <div class="tour__features__price">
-            <span class="bold">Precio</span>
-            desde $ <?= $price ?>
+            <div class="">
+                <?php get_template_part('template-parts/stars') ?>
+            </div>
+            <div class="">
+                Desde: <span class="bold">$ <?= $price ?></span>
+            </div>
         </div>
         <div>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/mountain.svg"

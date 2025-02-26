@@ -58,6 +58,17 @@
     justify-content: space-between;
 }
 
+.tour__features__price{
+    display: flex;
+    flex-direction: column !important;
+    gap: 5px;
+}
+
+.tour__features__price div{
+    display: flex;
+    flex-direction: row !important;
+    gap: 5px;
+}
 .separator-tours img {
     width: 100%;
     /* height: 34px; */
