@@ -2,24 +2,24 @@
 <?php
 $portada = get_field('portada') ? get_field('portada')['url'] : '';
 $title = get_the_title();
-$price = get_field('informacion_general')['precio'];
-$tipo_tour = get_field('informacion_general')['tipo_tour'];
+$price = get_field('informacion_general')['precio'] ?? '';
+$tipo_tour = get_field('informacion_general')['tipo_tour'] ?? '';
 
-$duracion = get_field('caracteristicas')['duracion'];
-$dificultad = get_field('caracteristicas')['nivel_dificultad'];
+$duracion = get_field('caracteristicas')['duracion'] ?? '';
+$dificultad = get_field('caracteristicas')['nivel_dificultad'] ?? '';
 
-$descripcion = get_field('descripcion_viaje');
-$detalle_recorrido = get_field('detalles_recorrido');
+$descripcion = get_field('descripcion_viaje') ?? '';
+$detalle_recorrido = get_field('detalles_recorrido') ?? '';
 
-$image1 = get_field('imagen1');
-$image2 = get_field('imagen2');
-$image3 = get_field('imagen3');
+$image1 = get_field('imagen1') ?? ['url'=>''];
+$image2 = get_field('imagen2') ?? ['url'=>''];
+$image3 = get_field('imagen3') ?? ['url'=>''];
 
-$itinerario = get_field('itinerario');
+$itinerario = get_field('itinerario') ?? '';
 
-$incluye = get_field('incluye');
-$noIncluye = get_field('no_incluye');
-$recomendaciones = get_field('recomendaciones');
+$incluye = get_field('incluye') ?? [];
+$noIncluye = get_field('no_incluye') ?? [];
+$recomendaciones = get_field('recomendaciones') ?? [];
 ?>
 
 <?php get_template_part('template-parts/taxonomy-hero', null, [
@@ -100,7 +100,63 @@ $recomendaciones = get_field('recomendaciones');
             </div>
             <div class="tour__gallery" id="gallery">
                 <h4>Galería Fotográfica</h4>
-                <img src="<?= $image1['url'] ?>" alt="<?= $image1['alt'] ?>">
+
+                <div class="galeria">
+                    <a href="<?= $image1['url'] ?>" data-pswp-width="800" data-pswp-height="600">
+                        <img src="<?= $image1['url'] ?>" alt="Imagen 1">
+                    </a>
+                    <a href="<?= $image2['url'] ?>" data-pswp-width="800" data-pswp-height="600">
+                        <img src="<?= $image2['url'] ?>" alt="Imagen 2">
+                    </a>
+                    <a href="<?= $image3['url'] ?>" data-pswp-width="800" data-pswp-height="600">
+                        <img src="<?= $image3['url'] ?>" alt="Imagen 3">
+                    </a>
+                </div>
+
+                <!-- Contenedor del lightbox (requerido por PhotoSwipe) -->
+                <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="pswp__bg"></div>
+                    <div class="pswp__scroll-wrap">
+                        <div class="pswp__container">
+                            <div class="pswp__item"></div>
+                            <div class="pswp__item"></div>
+                            <div class="pswp__item"></div>
+                        </div>
+                        <div class="pswp__ui pswp__ui--hidden">
+                            <div class="pswp__top-bar">
+                                <div class="pswp__counter"></div>
+                                <button class="pswp__button pswp__button--close" title="Cerrar"></button>
+                                <button class="pswp__button pswp__button--zoom" title="Zoom"></button>
+                                <button class="pswp__button pswp__button--fs" title="Pantalla completa"></button>
+                            </div>
+                            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                                <div class="pswp__share-tooltip"></div>
+                            </div>
+                            <button class="pswp__button pswp__button--arrow--left" title="Anterior"></button>
+                            <button class="pswp__button pswp__button--arrow--right" title="Siguiente"></button>
+                            <div class="pswp__caption">
+                                <div class="pswp__caption__center"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Incluye los scripts de PhotoSwipe 5 -->
+                <script src="https://cdn.jsdelivr.net/npm/photoswipe@5.3.7/dist/umd/photoswipe.umd.min.js"></script>
+                <script
+                    src="https://cdn.jsdelivr.net/npm/photoswipe@5.3.7/dist/umd/photoswipe-lightbox.umd.min.js"></script>
+                <script>
+                    // Inicializa PhotoSwipe Lightbox
+                    document.addEventListener('DOMContentLoaded', function () {
+                        const lightbox = new PhotoSwipeLightbox({
+                            gallery: '.galeria', // Selector de la galería
+                            children: 'a', // Selector de los elementos hijos (enlaces)
+                            pswpModule: PhotoSwipe, // Módulo de PhotoSwipe
+                        });
+
+                        lightbox.init();
+                    });
+                </script>
             </div>
             <div class="tour__itinerary" id="itinerary">
                 <h4>Itinerario</h4>
