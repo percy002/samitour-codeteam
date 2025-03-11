@@ -5,7 +5,7 @@
     <div class="swiper-wrapper">
         <div class="swiper-slide">
             <div class="hero"
-                style="background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%), url(<?php echo get_template_directory_uri(); ?>/assets/img/mapi1.jpeg) lightgray 0px -69.893px / 100% 137.143% no-repeat;">
+                style="background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%), url(<?php echo get_template_directory_uri(); ?>/assets/img/mapi1.jpeg)">
                 <div class="hero__content">
                     <div class="hero__content__info">
                         <h4 class="hero__title">DESCUBRE MACHU PICCHU</h4>
@@ -19,7 +19,7 @@
         </div>
         <div class="swiper-slide">
             <div class="hero"
-                style="background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%), url(<?php echo get_template_directory_uri(); ?>/assets/img/humantay1.jpeg) lightgray 0px -69.893px / 100% 137.143% no-repeat;">
+                style="background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%), url(<?php echo get_template_directory_uri(); ?>/assets/img/humantay1.jpeg)">
                 <div class="hero__content">
                     <div class="hero__content__info">
                         <h4 class="hero__title">DESCUBRE LA LAGUNA HUMANTAY</h4>
@@ -32,7 +32,7 @@
         </div>
         <div class="swiper-slide">
             <div class="hero"
-                style="background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%), url(<?php echo get_template_directory_uri(); ?>/assets/img/vinicunca1.jpeg) lightgray 0px -69.893px / 100% 137.143% no-repeat;">
+                style="background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%), url(<?php echo get_template_directory_uri(); ?>/assets/img/vinicunca1.jpeg)">
                 <div class="hero__content">
                     <div class="hero__content__info">
                         <h4 class="hero__title">DESCUBRE LA MONTAÑA DE COLORES</h4>

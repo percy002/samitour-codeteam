@@ -1,6 +1,11 @@
 <section class="section-container-footer">
     <div class="footer-line"></div>
 </section>
+<div class="whatsapp-button">
+    <a href="https://wa.me/51972070311?text=Hola%20Samitours%20Machu%20Picchu,%20estoy%20interesado%20en%20obtener%20más%20información%20sobre%20sus%20tours." target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+</div>
 </body>
 <footer>
     <div class="footer">

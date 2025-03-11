@@ -60,7 +60,8 @@
 }
 
 .separator img {
-    width: 100vw;
+    width: 100%;
+    min-height: 30px;
     opacity: 0.5;
     object-fit: cover;
 }
