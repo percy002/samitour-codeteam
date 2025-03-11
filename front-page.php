@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-
 <!-- <div class="hero"> -->
 <div class="swiper mySwiper">
     <div class="swiper-wrapper">
@@ -64,9 +63,48 @@
 <?php get_template_part('template-parts/separator', null, array('title' => "TOURS", 'highlight' => "CUSCO", 'color' => "secondary")); ?>
 
 <section class="section-container">
-    <h4>Destinos mas populares del cusco</h4>
+    <h4>Destinos mas populares del Cusco</h4>
+    <?php
+    $primer_tour_popular = get_field('primer_tour_favorito');
+    $segundo_tour_popular = get_field('segundo_tour_favorito');
+    $tercer_tour_popular = get_field('tercer_tour_favorito');    
+    ?>
 
-    <?php get_template_part('inc/tour-list'); ?>
+
+    <div class="tours-list">
+        <?php if ($primer_tour_popular): ?>
+            <?php get_template_part('template-parts/tourCard',null, [
+                'portada' => get_field('portada',$primer_tour_popular->ID),
+                'precio' => get_field('precio',$primer_tour_popular->ID),
+                'title' => $primer_tour_popular->post_title,
+                'content' => $primer_tour_popular->post_content,
+                'link' => get_permalink($primer_tour_popular->ID)
+            ]); ?>
+    
+        <?php endif ?>
+        <?php if ($segundo_tour_popular): ?>
+            <?php get_template_part('template-parts/tourCard',null, [
+                'portada' => get_field('portada',$segundo_tour_popular->ID),
+                'precio' => get_field('precio',$segundo_tour_popular->ID),
+                'title' => $segundo_tour_popular->post_title,
+                'content' => $segundo_tour_popular->post_content,
+                'link' => get_permalink($segundo_tour_popular->ID)
+            ]); ?>
+    
+        <?php endif ?>
+        <?php if ($tercer_tour_popular): ?>
+            <?php get_template_part('template-parts/tourCard',null, [
+                'portada' => get_field('portada',$tercer_tour_popular->ID),
+                'precio' => get_field('precio',$tercer_tour_popular->ID),
+                'title' => $tercer_tour_popular->post_title,
+                'content' => $tercer_tour_popular->post_content,
+                'link' => get_permalink($tercer_tour_popular->ID)
+            ]); ?>
+    
+        <?php endif ?>
+
+    </div>
+
 
     <div class="flex-center">
         <a href="" class="button-primary">VER MAS TOURS EN CUSCO</a>
@@ -77,21 +115,20 @@
 <section>
     <?php
     $image_slogan = get_field('slogan_imagen');
+    $slogan = get_field('slogan');
     ?>
     <div class="slogan">
         <div class="">
             <img src="<?= $image_slogan['url'] ?>" alt="">
         </div>
         <div class="slogan__content">
-            <h2>Cusco te esta esperando</h2>
-            <p>Escoge un paquete especial para que viajes y disfrutes de todo lo que tenemos reservado para ti...
-                Visitaremos</p>
+            <?= $slogan ?>
             <a href="" class="button-primary">EXPLORAR TOURS</a>
         </div>
     </div>
 </section>
 
-<?php get_template_part('template-parts/separator', null, array('title' => "TOURS", 'highlight' => "MACHU PICCHU", 'color' => "secondary")); ?>
+<?php get_template_part('template-parts/separator', null, array('title' => "TOURS", 'highlight' => "CUSCO", 'color' => "secondary")); ?>
 
 <section class="section-container">
 

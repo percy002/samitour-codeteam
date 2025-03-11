@@ -1,9 +1,22 @@
 <?php
+$taxonomy = isset($args['taxonomy']) ? $args['taxonomy'] : '';
+$term_id = isset($args['term_id']) ? $args['term_id'] : '';
+$number = isset($args['number']) ? $args['number'] : 3;
 // Consulta personalizada para obtener los Tours
 $args = array(
     'post_type' => 'tour',
-    'posts_per_page' => 3 // Número de tours a mostrar
+    'posts_per_page' => $number // Número de tours a mostrar
 );
+if ($taxonomy && $term_id) {
+    $args['tax_query'] = array(
+        array(
+            'taxonomy' => $taxonomy,
+            'field' => 'term_id',
+            'terms' => $term_id,
+        ),
+    );
+}
+
 $tours_query = new WP_Query($args);
 
 if ($tours_query->have_posts()): ?>

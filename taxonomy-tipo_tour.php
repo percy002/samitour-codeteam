@@ -13,7 +13,13 @@ $imagen_url = get_field('portada', 'term_' . $term->term_id); // Obtener el camp
 
 <section class="section-container">
 
-    <?php get_template_part('inc/tour-list'); ?>
+    <?php 
+        get_template_part('inc/tour-list', null, array(
+            'taxonomy' => $term->taxonomy, // Nombre de la taxonomía actual
+            'term_id' => $term->term_id, // ID del término de la taxonomía actual
+            'number' => 12 // Número de tours a mostrar
+        ));
+    ?>
 
     <div class="flex-center">
         <a href="" class="button-secondary">VER MAS TOURS EN CUSCO</a>
