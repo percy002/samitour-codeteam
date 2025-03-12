@@ -67,40 +67,40 @@
     <?php
     $primer_tour_popular = get_field('primer_tour_favorito');
     $segundo_tour_popular = get_field('segundo_tour_favorito');
-    $tercer_tour_popular = get_field('tercer_tour_favorito');    
+    $tercer_tour_popular = get_field('tercer_tour_favorito');
     ?>
 
 
     <div class="tours-list">
         <?php if ($primer_tour_popular): ?>
-            <?php get_template_part('template-parts/tourCard',null, [
-                'portada' => get_field('portada',$primer_tour_popular->ID),
-                'precio' => get_field('precio',$primer_tour_popular->ID),
+            <?php get_template_part('template-parts/tourCard', null, [
+                'portada' => get_field('portada', $primer_tour_popular->ID),
+                'precio' => get_field('precio', $primer_tour_popular->ID),
                 'title' => $primer_tour_popular->post_title,
                 'content' => $primer_tour_popular->post_content,
                 'link' => get_permalink($primer_tour_popular->ID)
             ]); ?>
-    
+
         <?php endif ?>
         <?php if ($segundo_tour_popular): ?>
-            <?php get_template_part('template-parts/tourCard',null, [
-                'portada' => get_field('portada',$segundo_tour_popular->ID),
-                'precio' => get_field('precio',$segundo_tour_popular->ID),
+            <?php get_template_part('template-parts/tourCard', null, [
+                'portada' => get_field('portada', $segundo_tour_popular->ID),
+                'precio' => get_field('precio', $segundo_tour_popular->ID),
                 'title' => $segundo_tour_popular->post_title,
                 'content' => $segundo_tour_popular->post_content,
                 'link' => get_permalink($segundo_tour_popular->ID)
             ]); ?>
-    
+
         <?php endif ?>
         <?php if ($tercer_tour_popular): ?>
-            <?php get_template_part('template-parts/tourCard',null, [
-                'portada' => get_field('portada',$tercer_tour_popular->ID),
-                'precio' => get_field('precio',$tercer_tour_popular->ID),
+            <?php get_template_part('template-parts/tourCard', null, [
+                'portada' => get_field('portada', $tercer_tour_popular->ID),
+                'precio' => get_field('precio', $tercer_tour_popular->ID),
                 'title' => $tercer_tour_popular->post_title,
                 'content' => $tercer_tour_popular->post_content,
                 'link' => get_permalink($tercer_tour_popular->ID)
             ]); ?>
-    
+
         <?php endif ?>
 
     </div>
@@ -132,8 +132,44 @@
 
 <section class="section-container">
 
-    <?php get_template_part('inc/tour-list'); ?>
+    <?php
+    $primer_tour_cusco = get_field('primer_tour_cusco');
+    $segundo_tour_cusco = get_field('segundo_tour_cusco');
+    $tercer_tour_cusco = get_field('tercer_tour_cusco');
+    ?>
+    <div class="tours-list">
+        <?php if ($primer_tour_cusco): ?>
+            <?php get_template_part('template-parts/tourCard', null, [
+                'portada' => get_field('portada', $primer_tour_cusco->ID),
+                'precio' => get_field('precio', $primer_tour_cusco->ID),
+                'title' => $primer_tour_cusco->post_title,
+                'content' => $primer_tour_cusco->post_content,
+                'link' => get_permalink($primer_tour_cusco->ID)
+            ]); ?>
 
+        <?php endif ?>
+        <?php if ($segundo_tour_cusco): ?>
+            <?php get_template_part('template-parts/tourCard', null, [
+                'portada' => get_field('portada', $segundo_tour_cusco->ID),
+                'precio' => get_field('precio', $segundo_tour_cusco->ID),
+                'title' => $segundo_tour_cusco->post_title,
+                'content' => $segundo_tour_cusco->post_content,
+                'link' => get_permalink($segundo_tour_cusco->ID)
+            ]); ?>
+
+        <?php endif ?>
+        <?php if ($tercer_tour_cusco): ?>
+            <?php get_template_part('template-parts/tourCard', null, [
+                'portada' => get_field('portada', $tercer_tour_cusco->ID),
+                'precio' => get_field('precio', $tercer_tour_cusco->ID),
+                'title' => $tercer_tour_cusco->post_title,
+                'content' => $tercer_tour_cusco->post_content,
+                'link' => get_permalink($tercer_tour_cusco->ID)
+            ]); ?>
+
+        <?php endif ?>
+
+    </div>
     <div class="flex-center">
         <a href="" class="button-secondary">VER MAS TOURS EN CUSCO</a>
     </div>
