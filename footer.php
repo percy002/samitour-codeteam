@@ -10,7 +10,7 @@
 <footer>
     <div class="footer">
         <div class="footer__brand">
-            <a href="<?php echo home_url() ?>">
+            <a href="<?php echo pll_home_url() ?>">
                 <img class="nav-menu__logo" src="<?php echo get_template_directory_uri() ?>/assets/img/logo_blanco.png"
                     alt="Logo">
             </a>

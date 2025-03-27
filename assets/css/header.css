@@ -261,3 +261,7 @@ nav {
 .mobile-submenu__contact p {
     color: var(--primary-color);
 }
+
+.current-menu-item{
+    border-bottom: 4px solid var(--secondary-color);
+}
