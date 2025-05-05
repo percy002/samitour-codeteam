@@ -91,15 +91,9 @@ $vision = get_field('vision');
 
     </div>
 </section>
-<section class="section-container">
-    <h4>Destinos mas Populares</h4>
-    <?php get_template_part('inc/tour-list'); ?>
+<?php get_template_part('template-parts/favoriteTours'); ?>
 
-    <div class="flex-center">
-        <a href="" class="button-secondary">VER MAS TOURS EN CUSCO</a>
-    </div>
 
-</section>
 <?php get_template_part('template-parts/contact'); ?>
 
 <?php get_footer(); ?>

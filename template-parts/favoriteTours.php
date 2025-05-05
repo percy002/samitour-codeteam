@@ -1,11 +1,13 @@
-
-
-<section class="section-container">
-    <h1>Destinos mas populares del Cusco</h1>
+<section class="section-container popular-tours">
+    <h1 class="popular-tours__title">Destinos mas populares del Cusco</h1>
     <?php
-    $primer_tour_popular = get_field('primer_tour_favorito');
-    $segundo_tour_popular = get_field('segundo_tour_favorito');
-    $tercer_tour_popular = get_field('tercer_tour_favorito');
+    // Obtener el ID de la página de inicio en el idioma actual
+    $front_page_id = pll_get_post(get_option('page_on_front'));
+
+    // Obtener los campos personalizados de la página de inicio
+    $primer_tour_popular = get_field('primer_tour_favorito', $front_page_id);
+    $segundo_tour_popular = get_field('segundo_tour_favorito', $front_page_id);
+    $tercer_tour_popular = get_field('tercer_tour_favorito', $front_page_id);
     ?>
 
 
@@ -49,6 +51,3 @@
     </div>
 
 </section>
-
-
-<?php get_footer(); ?>
