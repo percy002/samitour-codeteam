@@ -24,7 +24,7 @@
         <div class="top-nav__contact">
             <p><i class="fa-solid fa-envelope"></i> info@samitoursmachupicchu.com</p>
             <p>|</p>
-            <p><i class="fa-solid fa-mobile-screen"></i> +51 990 999 999</p>
+            <p><i class="fa-solid fa-mobile-screen"></i> +51 972 070 311</p>
             <p>|</p>
             <p>
                 <i class="fa-brands fa-facebook"></i>

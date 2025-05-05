@@ -6,13 +6,13 @@
     $link = isset($args['link']) ? $args['link'] : '';
 
 ?>
-<div class="tour-card">
+<article class="tour-card">
     <?php if ($portada): ?>
         <img src="<?php echo esc_url($portada['url']); ?>" alt="<?php echo esc_attr($portada['alt']); ?>" />
     <?php endif; ?>
     <div class="tour-card__content">
-        <h5><?= $title ?></h5>
-        <p><?php $content ?></p>
+        <h1><?= $title ?></h1>
+        <p><?= $content ?></p>
         <div class="tour-card__details">
             <?php get_template_part('template-parts/stars') ?>
             <div class="tour-card__content__price">
@@ -22,4 +22,4 @@
         </div>
         <a href="<?= $link; ?>" class="button-secondary">EXPLORAR TOUR</a>
     </div>
-</div>
+</article>
