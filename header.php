@@ -47,7 +47,8 @@
                 'menu_class' => 'menu-items'
             ));
             ?>
-            <button class="nav-menu__button">PREGUNTE AHORA</button>
+            <a href="https://wa.me/51972070311?text=Hola%20Samitours%20Machu%20Picchu,%20estoy%20interesado%20en%20obtener%20más%20información%20sobre%20sus%20tours."
+                target="_blank" class="nav-menu__button">PREGUNTE AHORA</a>
 
             <ul class="languages">
                 <li>
