@@ -51,6 +51,10 @@
   color: var(--secondary-color);
 }
 
+.hero__button{
+  cursor: pointer;
+}
+
 .about {
   display: flex;
   padding: 40px 0px;

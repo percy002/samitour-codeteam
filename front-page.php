@@ -12,7 +12,7 @@
                             incluido, donde
                             la historia y la naturaleza convergen en una experiencia inolvidable.</p>
                     </div>
-                    <button class="hero__button button-secondary">MÁS INFORMACIÓN</button>
+                    <a href="https://samitoursmachupicchu.com/tour/machupicchu-tour-por-tren/" class="hero__button button-secondary">MÁS INFORMACIÓN</a>
                 </div>
             </div>
         </div>
@@ -25,7 +25,7 @@
                         <p class="hero__subtitle">Vive una experiencia inolvidable entre montañas y nevados en la Laguna
                             Humantay</p>
                     </div>
-                    <button class="hero__button button-secondary">MÁS INFORMACIÓN</button>
+                    <a href="https://samitoursmachupicchu.com/tour/laguna-humantay/" class="hero__button button-secondary">MÁS INFORMACIÓN</a>
                 </div>
             </div>
         </div>
@@ -38,7 +38,7 @@
                         <p class="hero__subtitle">Conocida por su deslumbrante variedad de tonalidades, la montaña
                             Vinicunca ofrece una aventura extraordinaria en la sierra peruana.</p>
                     </div>
-                    <button class="hero__button button-secondary">MÁS INFORMACIÓN</button>
+                    <a href="https://samitoursmachupicchu.com/tour/montana-de-colores-vinicunca/" class="hero__button button-secondary">MÁS INFORMACIÓN</a>
                 </div>
             </div>
         </div>
@@ -56,8 +56,7 @@
         <p><?php the_content() ?></p>
     </div>
     <div class="flex-center">
-        <button class="button-secondary">LEER MAS</button>
-
+    <a href="<?php echo esc_url(get_permalink(pll_get_post(get_page_by_path('nosotros')->ID))); ?>" class="button-secondary">LEER MÁS</a>
     </div>
 </section>
 <?php get_template_part('template-parts/separator', null, array('title' => "TOURS", 'highlight' => "CUSCO", 'color' => "secondary")); ?>
@@ -128,7 +127,7 @@
     </div>
 </section>
 
-<?php get_template_part('template-parts/separator', null, array('title' => "TOURS", 'highlight' => "CUSCO", 'color' => "secondary")); ?>
+<?php get_template_part('template-parts/separator', null, array('title' => "NUESTROS PAQUETES TURISTICOS", 'highlight' => "", 'color' => "secondary")); ?>
 
 <section class="section-container">
 
@@ -169,9 +168,6 @@
 
         <?php endif ?>
 
-    </div>
-    <div class="flex-center">
-        <a href="" class="button-secondary">VER MAS TOURS EN CUSCO</a>
     </div>
 
 </section>
