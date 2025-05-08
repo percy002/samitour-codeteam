@@ -21,27 +21,25 @@
             <h6>CONTÁCTENOS</h6>
             <ul>
                 <li>Cusco Perú</li>
-                <li>+51 99999999</li>
-                <li>samitours@gmail.com</li>
+                <li>+51 972 070 311</li>
+                <li>info@samitoursmachupicchu.com</li>
             </ul>
         </div>
         <div class="footer__section">
             <h6>IMPORTANTE</h6>
             <ul>
-                <li>INICIO</li>
-                <li>NOSOTROS</li>
-                <li>CONTACTO</li>
-                <li>TÉRMINOS Y CONDICIONES</li>
-                <li>PREGUNTAS FRECUENTES</li>
+                <li><a href="<?php echo pll_home_url(); ?>">INICIO</a> </li>
+                <li><a href="<?php echo esc_url(get_permalink(pll_get_post(get_page_by_path('nosotros')->ID))); ?>">NOSOTROS</a></li>
+                <li><a href="">CONTACTO</a></li>
             </ul>
         </div>
         <div class="footer__section">
             <h6>TOURS</h6>
             <ul>
-                <li>TOURS CUSCO</li>
-                <li>TOURS MACHUPICCHU</li>
-                <li>PAQUETES</li>
-                <li>BLOG</li>
+                <li><a href="https://samitoursmachupicchu.com/tipo_tour/tours_cusco/">TOURS CUSCO</a></li>
+                <li><a href="https://samitoursmachupicchu.com/tipo_tour/machupicchu/">TOURS MACHUPICCHU</a></li>
+                <li><a href="https://samitoursmachupicchu.com/tipo_tour/paquetes/">PAQUETES</a></li>
+                <li><a href="">BLOG</a></li>
             </ul>
             <div class="footer__social">
                 <h6>SÍGUENOS EN:</h6>

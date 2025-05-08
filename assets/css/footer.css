@@ -133,7 +133,11 @@ footer {
     align-items: start;
     gap: 10px;
 }
-
+.footer__section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
 .footer__social {
     display: flex;
     flex-direction: column;
