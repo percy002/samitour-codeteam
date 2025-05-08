@@ -106,7 +106,7 @@
 
 
     <div class="flex-center">
-        <a href="" class="button-primary">VER MAS TOURS EN CUSCO</a>
+        <a href="https://samitoursmachupicchu.com/tipo_tour/tours_cusco/" class="button-primary">VER MAS TOURS EN CUSCO</a>
     </div>
 
 </section>
